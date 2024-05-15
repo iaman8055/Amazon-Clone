@@ -1,0 +1,40 @@
+user-Schemas
+Name -required type-string
+email-required type-string
+password -required type-string
+profile-image /avatar-required type string 
+date-default type-date
+//sign up or register 
+//login
+//logout
+//forgot password 
+//reset password 
+
+Product-Schemas
+name- required type-string
+image-required type-string
+category-required type-string
+new_price-required type-number
+old_price-required type-number
+date-default type-date
+
+//addtocart
+//removefromcart
+//newitems
+//popularitems
+
+//middlesware
+auth.js
+asynchandler
+errormiddleware
+
+//utils
+errorhandler
+sendtoken
+sendemail
+
+
+
+Frontend
+
+HomePage-Navbar,Slider,Featured Products,New Arrival,Banners ,Newsletter,footer

@@ -1,0 +1,90 @@
+.item{
+	width: 285px;
+	height: 410.2px;
+	background: #fff;
+	overflow: hidden;
+	background: transparent;
+  border: 1px solid black;
+  border-radius: 12px 12px 12px 12px;
+
+  }
+
+.description{
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  color: #212121;
+  outline: none;
+  padding: 17px 15px;
+  border: 1px solid #dbdee9;
+  max-height: 280px;
+}
+  
+  .item img{
+	width: 285px;
+	height: 220px;
+	margin: 0 auto;
+	object-fit: contain;
+ 
+  }
+
+  .description .name{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 20px;
+    font-weight: 500;
+    font-size: 14px;
+    max-width: 100%;
+    color: #1c1c28;
+    overflow: hidden;
+    height: 40px;
+    text-overflow: ellipsis;
+
+  }
+  .items-prices{
+	display: flex;
+    align-items: center;
+  margin-top: 10px;
+  gap: 10px;
+  min-height: 40px;
+  font-weight: 600;
+  }
+  .item-price-old{
+    text-decoration: line-through;
+    color: #aeb1bd;
+
+  }
+  .addtocart-btn{
+    display: flex;
+    width: 253.4px;
+    height: 45.6px;
+    /* padding: 12px 75px; */
+    border: 1px solid #ff8914;
+    justify-content: center;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff9f4;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .addtocart-btn button{
+    border: none;
+    background: none;
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: 600;
+    color: #ff8914;
+  }
+  .buttonclass{
+    display:flex;
+  }
+  .addtocart-btn img{
+   display:flex;
+	width: 20px;
+	height: 20px;
+  }
+  /* .addtocart-btn:hover{
+    background: #ff8914;
+    color: #fff;
+  }
+
+  */
