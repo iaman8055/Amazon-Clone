@@ -7,6 +7,8 @@ import image1 from '../../Assets/img2.webp'
 import image2 from '../../Assets/img3.webp'
 import image3 from '../../Assets/img4.webp'
 import { useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const Img=[
     {id:0,image:image0},
@@ -16,8 +18,14 @@ const Img=[
 ];
 
 const ProductDisplay = () => {
+    const{id} =useParams();
     const [mainImage, setMainImage] = useState(Img[0]);
-
+    const product=useSelector(store=>store.items.find(p=>p.id===id));
+    console.log(product);
+    // if (!product) {
+    //     return <div>Product not found</div>;
+    //   }
+    
     return (
         <div className="productdisplay">
             <div className="productdisplay-left">
@@ -38,7 +46,7 @@ const ProductDisplay = () => {
             <img className="productdisplay-img-main" src={mainImage.image} alt="" />
 
             <div className="productdisplay-right">
-                <h1>Name</h1>
+                <h1>{product.name}</h1>
                 <div className="productdisplay-right-description">
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis labore excepturi asperiores reprehenderit illum natus.
                 </div>
@@ -52,10 +60,10 @@ const ProductDisplay = () => {
                 </div>
                 <div className="productdisplay-right-price">
                     <div className="productdisplay-right-price-new">
-                        $180
+                        {product.new_price}
                     </div>
                     <div className="productdisplay-right-price-old">
-                        $200
+                        {product.old_price}
                     </div>
                 </div>
                 <div className="productdisplay-right-selectsize">

@@ -9,16 +9,16 @@ import Profile from './Pages/Profile'
 const App = () => {
   return (
     <div>
-      <BrowserRouter>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+ <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/productdetails' element={<ProductDisplay/>}/>
-        <Route path='/profile' element={<Profile/>}/>
+        <Route path='/productdetails/:id' element={<ProductDisplay/>}/>
       </Routes>
-      </BrowserRouter>
-      <Item/>
+       
+        {/* <Route path='/profile' element={<Profile/>}/> */}
+     
+      
     </div>
   )
 }

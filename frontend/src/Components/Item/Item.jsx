@@ -1,19 +1,20 @@
 import React from 'react'
 import './Item.css'
 import { Link } from 'react-router-dom';
-function Item() {
+function Item({item}) {
 	return (
+ <div className="item">
+			<Link to={`/productdetails/${item.id}`}>
 
-    <div className="item">
 			<img
-				src="https://img2.hkrtcdn.com/31812/pck_3181151_c_m.jpg"
+				src={item.image}
 				alt=""
 			/>
 			<div className="description">
-				<p className="name">MASSDROP X SENNHEISER HD 6XX HEADPHONES</p>
+				<p className="name">{item.name}</p>
 				<div className="items-prices">
-					<div className="item-price-new">₹</div>
-					<div className="item-price-old">₹</div>
+					<div className="item-price-new">₹{item.new_price}</div>
+					<div className="item-price-old">₹{item.old_price}</div>
 					<div className="variant-offer"></div>
 				</div>
 				<div className="addtocart-btn">
@@ -23,8 +24,9 @@ function Item() {
 					</div>
 				</div>
 			</div>
+			</Link>
+
 		</div>
-		// </Link>
 	)
 }
 

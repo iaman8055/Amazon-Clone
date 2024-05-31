@@ -1,8 +1,7 @@
-import React, { useState,useContext } from 'react'
+import React, { useState } from 'react'
 import { Avatar, Button, Container, IconButton, Paper, Stack, TextField, Typography } from '@mui/material'
 import {CameraAlt as CameraAltIcon} from '@mui/icons-material'
 import { VisuallyHiddenInput } from '../Components/styles/StyledComponents';
-import UserContext from '../context/UserContext'
 import { Link } from 'react-router-dom'
 const Login = () => {
     const[isLogin,setIsLogin]=useState(true)
@@ -11,11 +10,10 @@ const Login = () => {
     const[imagePrev,setImagePrev]=useState('')
     const[email,setEmail]=useState("")
     const[password,setPassword]=useState('')
-    const{setUser}=useContext(UserContext)
-    const handleSubmit=(e)=>{
-        e.preventDefault()
-        setUser({email,password})
-    }
+    // const handleSubmit=(e)=>{
+    //     e.preventDefault()
+    //     setUser({email,password})
+    // }
     const imageChangeHandler=(e)=>{
         const file=e.target.files[0]
         const reader=new FileReader();
@@ -51,7 +49,7 @@ const Login = () => {
                 marginTop:'1rem'
             
             }}
-            onSubmit={handleSubmit}>
+            >
             <TextField 
             required
             fullWidth
